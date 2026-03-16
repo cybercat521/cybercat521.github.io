@@ -44,11 +44,73 @@
       </h2>
       <div class="mt-4 text-gray-700 leading-relaxed space-y-3">
         <p class="lang-en">
-          This track focuses on real-world physical robot manipulation and adopts a <strong>multi-task strategy</strong>. Participants are required to use a single model to complete all designated tasks. There are no restrictions on the model type; both <strong>World Models</strong> and <strong>VLA models</strong> are welcome. Participants will use the RoboChallenge platform to submit evaluation tasks and execute models on real physical hardware.
+          This track focuses on real-world physical robot manipulation and adopts a <strong>multi-task strategy</strong>. In this competition, you will use your model to operate real robots to complete <strong>30 newly designed desktop manipulation tasks</strong> (20 basic tasks and 10 bonus tasks). Your model should be able to complete any of these different tasks based on prompt instructions. There are no restrictions on the model type; both World Models and VLA models are welcome.
         </p>
         <p class="lang-zh">
-          本赛道专注于真实物理世界的机器人操作，并采用<strong>多任务（multi-tasks）赛制策略</strong>。参赛者需要使用单个模型来完成所有指定的测试任务。赛道对参赛模型类型不做限制，<strong>世界模型（World Model）</strong>与 <strong>VLA 模型</strong>均可参赛。参赛者将使用 RoboChallenge 平台提交评测任务，并在真实物理硬件上执行模型推理结果。
+          本赛道专注于真实物理世界的机器人操作，并采用<strong>多任务（multi-tasks）赛制策略</strong>。在本次比赛中，你将通过你的模型操作真实的机器人完成 <strong>30 个全新设计的桌面操作任务</strong>，包括 20 个基础任务和 10 个附加任务。你的模型应当能够根据 prompt 的指示完成多个不同任务中的某一个。赛道对参赛模型类型不做限制，世界模型（World Model）与 VLA 模型均可参赛。
         </p>
+      </div>
+    </section>
+
+    <section class="bg-blue-50/50 backdrop-blur rounded-2xl border border-blue-100 shadow-[0_18px_60px_rgba(15,23,42,0.06)] p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-gray-900">
+        <span class="lang-en">Competition Rules & Scoring</span>
+        <span class="lang-zh">比赛规则与计分方式</span>
+      </h2>
+      <div class="mt-4 text-gray-700 leading-relaxed space-y-5">
+        
+        <div>
+          <h3 class="font-semibold text-gray-900">
+            <span class="lang-en">1. Resources & Quotas</span>
+            <span class="lang-zh">1. 资源与测试配额</span>
+          </h3>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li class="lang-en">Each team will receive demo data for all 30 tasks.</li>
+            <li class="lang-en">Each team has a total quota of <strong>100 + 10 task evaluation submissions</strong> (100 for basic tasks, 10 for bonus tasks).</li>
+            <li class="lang-en">Regardless of whether a test is scored, every task submitted counts towards your quota (e.g., submitting a batch of 5 tasks consumes 5 from your quota).</li>
+            
+            <li class="lang-zh">每支参赛队伍将得到 30 个任务全部的演示数据。</li>
+            <li class="lang-zh">每队拥有 <strong>100 + 10 次任务提交测评的配额</strong>（基础任务 100 次，附加任务 10 次）。</li>
+            <li class="lang-zh">无论是否计分，每次提交进行的所有任务都会计入总测试次数的配额（如：提交 5 个任务，就会占配额中的 5 次）。</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900">
+            <span class="lang-en">2. Testing Procedure & "Multi-task" Requirement</span>
+            <span class="lang-zh">2. 测试流程与“多任务”要求</span>
+          </h3>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li class="lang-en">Each model runs 10 consecutive times per task. On-site testers will record the success rate and step score.</li>
+            <li class="lang-en"><strong>Scored Submissions:</strong> To be eligible for final scoring, you must submit in a "multi-task" format. This means simultaneously submitting <em>all</em> basic tasks or <em>all</em> bonus tasks for the same robot type using the same model. We will initiate task tests in an unannounced order.</li>
+            <li class="lang-en"><strong>Unscored Submissions:</strong> You can submit any subset of tasks for testing, but if the submission does not include the full set of basic or bonus tasks for a robot type, it will be marked as "unscored" (though it still consumes quota).</li>
+            <li class="lang-en text-rose-600 font-medium">For all "bonus tasks", you only have ONE testing opportunity. We recommend optimizing your model on basic tasks first.</li>
+            
+            <li class="lang-zh">每个模型在每个任务上进行 10 次连续的运行，并由现场测试员统计成功率和步骤分。</li>
+            <li class="lang-zh"><strong>计分测试：</strong>如果希望进入最终计分，需要用多任务（multi-tasks）形式提交，即同时提交至少是同一机型的全部基础任务或全部附加任务（需使用同一模型）。我们会以事先不通知的顺序依次发起测试并统计总分。</li>
+            <li class="lang-zh"><strong>不计分测试：</strong>你可以以任意的任务子集发起测试，但如果不包含至少一个机型的全部基础或附加任务，将成为“不计分”测试（仍消耗配额）。</li>
+            <li class="lang-zh text-rose-600 font-medium">对于所有的“附加任务”，你都只有一次测试机会。推荐在基础任务效果调试好之后进行测试。</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900">
+            <span class="lang-en">3. Ranking & Prizes</span>
+            <span class="lang-zh">3. 排名与奖励</span>
+          </h3>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li class="lang-en">We will record the best submission per robot type in both basic and bonus sets (highest sum across a single test).</li>
+            <li class="lang-en">Total average success rate and step scores are calculated using weights: <strong>Weight 1.0</strong> for basic tasks, <strong>Weight 0.25</strong> for bonus tasks.</li>
+            <li class="lang-en">Ranking is based on total success rate. If tied, the step score will be used as a tie-breaker.</li>
+            <li class="lang-en">The <strong>Top 3</strong> teams will receive prize money. Teams with non-zero scores can apply for a certificate.</li>
+            
+            <li class="lang-zh">我们将在基础集合和附加集合中每机型记录最好的提交（即多次测试中以总和最高的单次测试为准）。</li>
+            <li class="lang-zh">总平均成功率和总平均步骤分将加权计算：基础任务权重为 <strong>1.0</strong>，附加任务权重为 <strong>0.25</strong>。</li>
+            <li class="lang-zh">最终按总成功率进行排名，如果成功率相同，按步骤分排名。</li>
+            <li class="lang-zh">比赛将角逐出<strong>前 3 名</strong>获得奖金。成绩非零的队伍都可以申请获得证书。</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -66,10 +128,10 @@
           </h2>
           <div class="mt-2 text-amber-800 leading-relaxed space-y-2 text-sm">
             <p class="lang-en">
-              The official Table30 for CVPR dataset and the dedicated track leaderboard are currently being prepared. They will be released shortly. In the meantime, participants can complete the registration, environment setup, and local Mock testing to prepare their pipelines.
+              The official Table30 for CVPR dataset and the dedicated track leaderboard are currently being prepared. They will be released shortly. In the meantime, invited participants can complete environment setup and local Mock testing.
             </p>
             <p class="lang-zh">
-              Table30 for CVPR 数据集以及专属赛道榜单目前正在进行准备，即将发布。在此期间，参赛队伍可以先行完成账号注册、环境搭建以及本地 Mock 离线测试，以便随时接入正式评测。
+              Table30 for CVPR 数据集以及专属赛道榜单目前正在进行准备，即将发布。在此期间，受邀队伍可以先行完成环境搭建以及本地 Mock 离线测试。
             </p>
           </div>
         </div>
@@ -85,24 +147,39 @@
         
         <div class="rounded-xl border border-gray-100 bg-gray-50 p-5">
           <h3 class="text-lg font-bold">
-            <span class="lang-en">Step 1. Registration & Setup</span>
-            <span class="lang-zh">步骤 1：账号注册与社群接入</span>
+            <span class="lang-en">Step 1. Invitation & Registration</span>
+            <span class="lang-zh">步骤 1：邀请与账号注册</span>
           </h3>
           <div class="mt-3 text-gray-700 leading-relaxed space-y-3">
             <p class="text-sm font-semibold text-rose-600 bg-rose-50 px-3 py-2 rounded-lg border border-rose-100 inline-block">
-              <span class="lang-en">⚠️ Note: Each team can only apply for ONE account.</span>
-              <span class="lang-zh">⚠️ 注意：每支队伍只能申请一个账号。</span>
+              <span class="lang-en">⚠️ Note: This competition is invite-only (max ~10 teams). Contact organizers via WeChat to join.</span>
+              <span class="lang-zh">⚠️ 注意：本比赛以邀请制进行，最终将有不超过 10 支左右的队伍参与。请先联络组织者。</span>
             </p>
             <ul class="list-disc pl-5 space-y-2">
-              <li class="lang-en">Send a registration application email to <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> using the template below:</li>
-              <li class="lang-zh">请使用以下模板向赛事官方邮箱 <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> 发送注册申请邮件：</li>
+              <li class="lang-en">Join the official WeChat group or contact organizers to discuss participation.</li>
+              <li class="lang-zh">请加入微信群或联络组织者沟通参赛事宜。我们将尽最大可能为每支队伍保障测试次数。</li>
             </ul>
 
-            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm font-mono whitespace-pre-wrap overflow-x-auto shadow-inner">Subject: User Account Application Request - CVPR 2026 Workshop Competition
+            <div class="my-4 flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-200 shadow-sm w-fit">
+              <img src="https://gigaai-research.github.io/GigaBrain-Challenge-2026/?wechat=rc" alt="WeChat Group QR Code" class="w-24 h-24 object-cover rounded-lg border border-gray-100">
+              <div class="text-sm">
+                  <p class="font-bold text-gray-900 lang-en">Official WeChat Group</p>
+                  <p class="font-bold text-gray-900 lang-zh">官方微信交流群</p>
+                  <p class="text-gray-500 mt-1 lang-en">Scan the QR code to join</p>
+                  <p class="text-gray-500 mt-1 lang-zh">扫码加入群聊联系组织者</p>
+              </div>
+            </div>
+
+            <ul class="list-disc pl-5 space-y-2 mt-2">
+              <li class="lang-en">Once officially invited, send a registration application email to <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> to apply for your testing Token using the template below:</li>
+              <li class="lang-zh">收到正式邀请后，请使用以下模板向 <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> 发送邮件，申请测试 Token：</li>
+            </ul>
+
+            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm font-mono whitespace-pre-wrap overflow-x-auto shadow-inner mt-3">Subject: User Account Application Request - CVPR 2026 Workshop Competition
 
 Dear RoboChallenge Team,
 
-I would like to apply for a user account for RoboChallenge Platform. My details are as follows:
+I have received an invitation and would like to apply for a testing Token. My details are as follows:
 
 Team Name:
 [Your Team Name]
@@ -123,18 +200,7 @@ Email Address:
 [Your Email]
 
 Phone Number:
-[Your Phone Number]
-
-Purpose of Application:
-Participating in the CVPR 2026 Workshop Competition</div>
-
-            <ul class="list-disc pl-5 space-y-2 mt-4">
-              <li class="lang-en">Once approved, you will receive a User Token via email.</li>
-              <li class="lang-en"><strong>Crucial:</strong> Scan the QR code in the reply email to join the official WeChat support group for real-time assistance and to schedule your on-device tests later.</li>
-              
-              <li class="lang-zh">审核通过后，官方将发放包含专属令牌 (Token) 的确认邮件。</li>
-              <li class="lang-zh"><strong>必做事项：</strong>通过邮件中的二维码加入官方微信群，以便后续沟通和预约真机测试时间。</li>
-            </ul>
+[Your Phone Number]</div>
           </div>
         </div>
 
@@ -187,18 +253,67 @@ Participating in the CVPR 2026 Workshop Competition</div>
           </h3>
           <div class="mt-3 text-gray-700 leading-relaxed space-y-4">
             <ul class="list-disc pl-5 space-y-2">
-                <li class="lang-en">Log in and click <strong>Eval Your Policy</strong>. Since this track utilizes a multi-task strategy, select <strong>Multitask</strong> as your Model Type and select the tasks you wish to evaluate.</li>
-                <li class="lang-en">After submission, go to <strong>My Submissions</strong> to get your Run ID.</li>
-                <li class="lang-en">Negotiate a testing time slot with the official team via the official WeChat group.</li>
-                <li class="lang-en">During your slot, run the formal script locally to interact with the physical device via HTTP:</li>
+                <li class="lang-en">Submit your test request via the RoboChallenge platform.</li>
+                <li class="lang-en">The real-robot testing time will be based on your scheduled appointment, and our operations staff will communicate with you in advance.</li>
+                <li class="lang-en">After submission, get your Run ID. Prepare your model and code before the scheduled slot.</li>
+                <li class="lang-en">During your slot, use the API to get current machine info and run the formal script locally to interact with the physical device and submit trajectories:</li>
                 
-                <li class="lang-zh">登录后点击 <strong>Eval Your Policy</strong> 按钮。由于赛制要求，请在模型类型中选择 <strong>Multitask</strong>，并勾选你需要评测的任务。</li>
-                <li class="lang-zh">提交后在 <strong>My Submissions</strong> 页面获取你的 Run ID。</li>
-                <li class="lang-zh">通过官方微信群与官方协商本条 Run ID 的测试时间。</li>
-                <li class="lang-zh">在指定时间段内，本地运行正式推理脚本，程序将与真实物理设备交互：</li>
+                <li class="lang-zh">通过 RoboChallenge 平台提交测试请求。</li>
+                <li class="lang-zh">真机测试时间将以预约的时间为准，同时也会有运营人员提前进行沟通。</li>
+                <li class="lang-zh">提交后获取你的 Run ID。你需要在测试开始前准备好你的模型和程序。</li>
+                <li class="lang-zh">在指定时间段内，通过 API 获取当前机器信息，并在本地运行正式推理脚本，程序将与真实物理设备交互并提交动作轨迹：</li>
             </ul>
             <code class="block bg-gray-900 text-gray-100 p-3 rounded-lg text-sm">python3 demo.py --user_token {Your Token} --run_id {Your Run ID} --checkpoint {Model Path}</code>
           </div>
+
+          <div class="mt-6 rounded-2xl border border-gray-100 bg-gradient-to-br from-white via-white to-amber-50 p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-bold text-gray-900">
+                <span class="lang-en">Schedule & countdown (UTC)</span>
+                <span class="lang-zh">时间安排与倒计时（UTC）</span>
+              </div>
+              <div class="text-xs font-semibold text-gray-600 ring-1 ring-inset ring-gray-200 rounded-full px-2.5 py-1 bg-white">
+                <span class="lang-en">UTC</span>
+                <span class="lang-zh">UTC</span>
+              </div>
+            </div>
+            <p class="mt-2 text-sm text-gray-600">
+              <span class="lang-en">All timestamps below are in UTC.</span>
+              <span class="lang-zh">以下时间均为 UTC（全球统一时区）。</span>
+            </p>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div id="start-card" class="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-opacity duration-300">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="text-sm font-semibold text-gray-900">
+                    <span class="lang-en">Competition Starts</span>
+                    <span class="lang-zh">比赛开始</span>
+                  </div>
+                  <span class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-inset ring-gray-200 bg-gray-50 text-gray-600">
+                    <span id="start-status-en" class="lang-en">—</span>
+                    <span id="start-status-zh" class="lang-zh">—</span>
+                  </span>
+                </div>
+                <div class="mt-2 text-sm text-gray-600" id="start-time">—</div>
+                <div class="mt-3 text-3xl font-bold tracking-tight text-gray-900 tabular-nums" id="start-countdown">—</div>
+              </div>
+              
+              <div id="end-card" class="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-opacity duration-300">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="text-sm font-semibold text-gray-900">
+                    <span class="lang-en">Competition Ends</span>
+                    <span class="lang-zh">比赛结束</span>
+                  </div>
+                  <span class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-inset ring-gray-200 bg-gray-50 text-gray-600">
+                    <span id="end-status-en" class="lang-en">—</span>
+                    <span id="end-status-zh" class="lang-zh">—</span>
+                  </span>
+                </div>
+                <div class="mt-2 text-sm text-gray-600" id="end-time">—</div>
+                <div class="mt-3 text-3xl font-bold tracking-tight text-gray-900 tabular-nums" id="end-countdown">—</div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -233,11 +348,80 @@ Participating in the CVPR 2026 Workshop Competition</div>
       try { localStorage.setItem('gb_lang', lang); } catch {}
     };
 
+    const pad2 = (n) => String(n).padStart(2, '0');
+
+    const formatUtc = (ms) => {
+      const d = new Date(ms);
+      return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate()) + ' ' + pad2(d.getUTCHours()) + ':' + pad2(d.getUTCMinutes()) + ' UTC';
+    };
+
+    const formatCountdown = (ms) => {
+      const total = Math.max(0, Math.floor(ms / 1000));
+      const days = Math.floor(total / 86400);
+      const hours = Math.floor((total % 86400) / 3600);
+      const minutes = Math.floor((total % 3600) / 60);
+      const seconds = total % 60;
+      const dayPart = days > 0 ? days + 'd ' : '';
+      return dayPart + pad2(hours) + ':' + pad2(minutes) + ':' + pad2(seconds);
+    };
+
+    const initCountdown = () => {
+      // April 15, 2026 10:00 BJT -> April 15, 2026 02:00 UTC
+      // May 15, 2026 10:00 BJT -> May 15, 2026 02:00 UTC
+      const events = [
+        { id: 'start', time_id: 'start-time', countdown_id: 'start-countdown', card_id: 'start-card', status_en_id: 'start-status-en', status_zh_id: 'start-status-zh', target_ms: Date.UTC(2026, 3, 15, 2, 0, 0) },
+        { id: 'end', time_id: 'end-time', countdown_id: 'end-countdown', card_id: 'end-card', status_en_id: 'end-status-en', status_zh_id: 'end-status-zh', target_ms: Date.UTC(2026, 4, 15, 2, 0, 0) }
+      ];
+
+      const nodes = events.map((e) => ({
+        time: document.getElementById(e.time_id),
+        countdown: document.getElementById(e.countdown_id),
+        card: document.getElementById(e.card_id),
+        status_en: document.getElementById(e.status_en_id),
+        status_zh: document.getElementById(e.status_zh_id),
+        target_ms: e.target_ms
+      }));
+
+      if (nodes.some((n) => !n.time || !n.countdown || !n.card || !n.status_en || !n.status_zh)) return;
+
+      nodes.forEach((n) => {
+        n.time.textContent = formatUtc(n.target_ms);
+      });
+
+      const tick = () => {
+        const now = Date.now();
+        nodes.forEach((n, index) => {
+          const remain = n.target_ms - now;
+          n.countdown.textContent = formatCountdown(remain);
+          const done = remain <= 0;
+          
+          if (index === 0) {
+              // Start Card Logic
+              n.status_en.textContent = done ? 'Started' : 'Upcoming';
+              n.status_zh.textContent = done ? '已开始' : '即将开始';
+          } else {
+              // End Card Logic
+              n.status_en.textContent = done ? 'Ended' : 'Not Ended';
+              n.status_zh.textContent = done ? '已结束' : '尚未结束';
+          }
+
+          if (done) n.card.classList.add('opacity-60');
+          else n.card.classList.remove('opacity-60');
+        });
+      };
+
+      tick();
+      window.setInterval(tick, 1000);
+    };
+
     window.addEventListener('DOMContentLoaded', () => {
       const saved = (() => { try { return localStorage.getItem('gb_lang'); } catch { return null; } })();
       setLang(saved === 'zh' ? 'zh' : 'en');
       document.getElementById('btn-en')?.addEventListener('click', () => setLang('en'));
       document.getElementById('btn-zh')?.addEventListener('click', () => setLang('zh'));
+      
+      // Initialize the countdown timers
+      initCountdown();
     });
   </script>
 </body>
