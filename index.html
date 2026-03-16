@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboChallenge Track Guide | GigaBrain Challenge 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .lang-zh { display: none; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900">
+  <header class="bg-white/70 backdrop-blur border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <a href="../index.html#tracks" class="text-sm font-semibold text-gray-600 hover:text-gray-900">← Back to Tracks</a>
+          <h1 class="mt-2 text-3xl font-bold tracking-tight">
+            <span class="lang-en">RoboChallenge Track Guide</span>
+            <span class="lang-zh">RoboChallenge 赛道指南</span>
+          </h1>
+          <p class="mt-2 text-gray-600">
+            <span class="lang-en">Evaluate multi-task embodied intelligence models on real physical hardware via RoboChallenge.</span>
+            <span class="lang-zh">通过 RoboChallenge 平台在真实物理硬件上评测多任务具身智能模型。</span>
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-2">
+          <button id="btn-en" type="button" class="rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-gray-900 text-white">EN</button>
+          <button id="btn-zh" type="button" class="rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-white text-gray-700 hover:bg-gray-50">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-24 -z-10 h-72 bg-gradient-to-r from-amber-200/40 via-orange-200/30 to-yellow-200/40 blur-3xl"></div>
+    
+    <section class="bg-white/80 backdrop-blur rounded-2xl border border-gray-100 shadow-[0_18px_60px_rgba(15,23,42,0.06)] p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-gray-900">
+        <span class="lang-en">Overview</span>
+        <span class="lang-zh">总体介绍</span>
+      </h2>
+      <div class="mt-4 text-gray-700 leading-relaxed space-y-3">
+        <p class="lang-en">
+          This track focuses on real-world physical robot manipulation and adopts a <strong>multi-task strategy</strong>. Participants are required to use a single model to complete all designated tasks. There are no restrictions on the model type; both <strong>World Models</strong> and <strong>VLA models</strong> are welcome. Participants will use the RoboChallenge platform to submit evaluation tasks and execute models on real physical hardware.
+        </p>
+        <p class="lang-zh">
+          本赛道专注于真实物理世界的机器人操作，并采用<strong>多任务（multi-tasks）赛制策略</strong>。参赛者需要使用单个模型来完成所有指定的测试任务。赛道对参赛模型类型不做限制，<strong>世界模型（World Model）</strong>与 <strong>VLA 模型</strong>均可参赛。参赛者将使用 RoboChallenge 平台提交评测任务，并在真实物理硬件上执行模型推理结果。
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-amber-50 rounded-2xl border border-amber-200 p-6 sm:p-8 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="shrink-0">
+            <svg class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-amber-900">
+            <span class="lang-en">Notice: Table30 for CVPR Dataset & Leaderboard Under Construction</span>
+            <span class="lang-zh">重要通知：Table30 for CVPR 数据集与榜单筹备中</span>
+          </h2>
+          <div class="mt-2 text-amber-800 leading-relaxed space-y-2 text-sm">
+            <p class="lang-en">
+              The official Table30 for CVPR dataset and the dedicated track leaderboard are currently being prepared. They will be released shortly. In the meantime, participants can complete the registration, environment setup, and local Mock testing to prepare their pipelines.
+            </p>
+            <p class="lang-zh">
+              Table30 for CVPR 数据集以及专属赛道榜单目前正在进行准备，即将发布。在此期间，参赛队伍可以先行完成账号注册、环境搭建以及本地 Mock 离线测试，以便随时接入正式评测。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white/80 backdrop-blur rounded-2xl border border-gray-100 shadow-[0_18px_60px_rgba(15,23,42,0.06)] p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-gray-900">
+        <span class="lang-en">Step-by-step Guidance</span>
+        <span class="lang-zh">参赛步骤</span>
+      </h2>
+      <div class="mt-4 grid gap-6">
+        
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-5">
+          <h3 class="text-lg font-bold">
+            <span class="lang-en">Step 1. Registration & Setup</span>
+            <span class="lang-zh">步骤 1：账号注册与社群接入</span>
+          </h3>
+          <div class="mt-3 text-gray-700 leading-relaxed space-y-3">
+            <p class="text-sm font-semibold text-rose-600 bg-rose-50 px-3 py-2 rounded-lg border border-rose-100 inline-block">
+              <span class="lang-en">⚠️ Note: Each team can only apply for ONE account.</span>
+              <span class="lang-zh">⚠️ 注意：每支队伍只能申请一个账号。</span>
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="lang-en">Send a registration application email to <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> using the template below:</li>
+              <li class="lang-zh">请使用以下模板向赛事官方邮箱 <strong class="text-gray-900">join-robochallenge@robochallenge.ai</strong> 发送注册申请邮件：</li>
+            </ul>
+
+            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm font-mono whitespace-pre-wrap overflow-x-auto shadow-inner">Subject: User Account Application Request - CVPR 2026 Workshop Competition
+
+Dear RoboChallenge Team,
+
+I would like to apply for a user account for RoboChallenge Platform. My details are as follows:
+
+Team Name:
+[Your Team Name]
+
+Nationality:
+[Your Nationality]
+
+Institute/Organization:
+[Your Institute / Organization]
+
+Department:
+[Your Department]
+
+Position/Title:
+[Your Position]
+
+Email Address:
+[Your Email]
+
+Phone Number:
+[Your Phone Number]
+
+Purpose of Application:
+Participating in the CVPR 2026 Workshop Competition</div>
+
+            <ul class="list-disc pl-5 space-y-2 mt-4">
+              <li class="lang-en">Once approved, you will receive a User Token via email.</li>
+              <li class="lang-en"><strong>Crucial:</strong> Scan the QR code in the reply email to join the official WeChat support group for real-time assistance and to schedule your on-device tests later.</li>
+              
+              <li class="lang-zh">审核通过后，官方将发放包含专属令牌 (Token) 的确认邮件。</li>
+              <li class="lang-zh"><strong>必做事项：</strong>通过邮件中的二维码加入官方微信群，以便后续沟通和预约真机测试时间。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-5">
+          <h3 class="text-lg font-bold">
+            <span class="lang-en">Step 2. Environment & Local Mock Testing</span>
+            <span class="lang-zh">步骤 2：环境搭建与本地 Mock 调试</span>
+          </h3>
+          <div class="mt-3 text-gray-700 leading-relaxed space-y-3">
+            <p class="lang-en">
+              Before real-robot evaluation, you must adapt your model using the official inference repository.
+            </p>
+            <p class="lang-zh">
+              在进行真机测试前，需基于官方推理仓库完成环境搭建与代码适配。
+            </p>
+            
+            <div class="rounded-xl border border-gray-100 bg-white p-5 space-y-4">
+                <div class="font-semibold text-gray-900">
+                    <span class="lang-en">1. Clone Repository:</span>
+                    <span class="lang-zh">1. 克隆仓库：</span>
+                </div>
+                <code class="block bg-gray-900 text-gray-100 p-3 rounded-lg text-sm">git clone https://github.com/RoboChallenge/RoboChallengeInference.git <br> pip install -r requirements.txt</code>
+                
+                <div class="font-semibold text-gray-900">
+                    <span class="lang-en">2. Start Mock Server:</span>
+                    <span class="lang-zh">2. 启动本地 Mock 服务：</span>
+                </div>
+                <p class="text-sm">
+                    <span class="lang-en">Edit <code>mock_settings.py</code> to configure your target robot tag (e.g., 'aloha', 'arx5', 'ur5', 'franka'). Then run:</span>
+                    <span class="lang-zh">编辑 <code>mock_settings.py</code> 设置目标机器人（如 'aloha', 'arx5', 'ur5', 'franka'）。随后运行：</span>
+                </p>
+                <code class="block bg-gray-900 text-gray-100 p-3 rounded-lg text-sm">python3 mock_robot_server.py</code>
+
+                <div class="font-semibold text-gray-900">
+                    <span class="lang-en">3. Execute Test Script:</span>
+                    <span class="lang-zh">3. 执行调试脚本：</span>
+                </div>
+                <p class="text-sm">
+                    <span class="lang-en">Run <code>test.py</code> to verify that your custom policy properly interacts with the Mock interface.</span>
+                    <span class="lang-zh">运行 <code>test.py</code> 验证推理逻辑能否成功生成动作指令并下发至 Mock 机器人。</span>
+                </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-5">
+          <h3 class="text-lg font-bold">
+            <span class="lang-en">Step 3. Online Submission & Real Robot Execution</span>
+            <span class="lang-zh">步骤 3：线上提交与真机执行</span>
+          </h3>
+          <div class="mt-3 text-gray-700 leading-relaxed space-y-4">
+            <ul class="list-disc pl-5 space-y-2">
+                <li class="lang-en">Log in and click <strong>Eval Your Policy</strong>. Since this track utilizes a multi-task strategy, select <strong>Multitask</strong> as your Model Type and select the tasks you wish to evaluate.</li>
+                <li class="lang-en">After submission, go to <strong>My Submissions</strong> to get your Run ID.</li>
+                <li class="lang-en">Negotiate a testing time slot with the official team via the official WeChat group.</li>
+                <li class="lang-en">During your slot, run the formal script locally to interact with the physical device via HTTP:</li>
+                
+                <li class="lang-zh">登录后点击 <strong>Eval Your Policy</strong> 按钮。由于赛制要求，请在模型类型中选择 <strong>Multitask</strong>，并勾选你需要评测的任务。</li>
+                <li class="lang-zh">提交后在 <strong>My Submissions</strong> 页面获取你的 Run ID。</li>
+                <li class="lang-zh">通过官方微信群与官方协商本条 Run ID 的测试时间。</li>
+                <li class="lang-zh">在指定时间段内，本地运行正式推理脚本，程序将与真实物理设备交互：</li>
+            </ul>
+            <code class="block bg-gray-900 text-gray-100 p-3 rounded-lg text-sm">python3 demo.py --user_token {Your Token} --run_id {Your Run ID} --checkpoint {Model Path}</code>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const displayForElement = (el) => {
+      const tag = (el?.tagName || '').toUpperCase();
+      if (tag === 'SPAN' || tag === 'A' || tag === 'B' || tag === 'STRONG' || tag === 'EM' || tag === 'I') return 'inline';
+      if (tag === 'LI') return 'list-item';
+      return 'block';
+    };
+
+    const setLang = (lang) => {
+      const zh = document.querySelectorAll('.lang-zh');
+      const en = document.querySelectorAll('.lang-en');
+      const showZh = lang === 'zh';
+      for (const el of zh) el.style.display = showZh ? displayForElement(el) : 'none';
+      for (const el of en) el.style.display = showZh ? 'none' : '';
+      const btnEn = document.getElementById('btn-en');
+      const btnZh = document.getElementById('btn-zh');
+      if (btnEn && btnZh) {
+        if (showZh) {
+          btnZh.className = 'rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-gray-900 text-white';
+          btnEn.className = 'rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-white text-gray-700 hover:bg-gray-50';
+        } else {
+          btnEn.className = 'rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-gray-900 text-white';
+          btnZh.className = 'rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-200 bg-white text-gray-700 hover:bg-gray-50';
+        }
+      }
+      try { localStorage.setItem('gb_lang', lang); } catch {}
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = (() => { try { return localStorage.getItem('gb_lang'); } catch { return null; } })();
+      setLang(saved === 'zh' ? 'zh' : 'en');
+      document.getElementById('btn-en')?.addEventListener('click', () => setLang('en'));
+      document.getElementById('btn-zh')?.addEventListener('click', () => setLang('zh'));
+    });
+  </script>
+</body>
+</html>
