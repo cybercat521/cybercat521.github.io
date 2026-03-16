@@ -415,8 +415,9 @@ Phone Number:
     };
 
     window.addEventListener('DOMContentLoaded', () => {
-      const saved = (() => { try { return localStorage.getItem('gb_lang'); } catch { return null; } })();
-      setLang(saved === 'zh' ? 'zh' : 'en');
+      // Always enforce English on page load
+      setLang('en');
+      
       document.getElementById('btn-en')?.addEventListener('click', () => setLang('en'));
       document.getElementById('btn-zh')?.addEventListener('click', () => setLang('zh'));
       
